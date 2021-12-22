@@ -5,15 +5,18 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "prestart": "npm run doc",
     "start": "npm-run-all --parallel start:**",
     "start:client": "npm run dev",
-    "start:server": "nodemon ./server/src/index.ts"
+    "start:server": "nodemon ./server/src/index.ts",
+    "doc": "swagger-cli bundle ./server/openapi.yaml --outfile ./server/src/swagger.yaml --type yaml"
   },
   "dependencies": {
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "swagger-cli": "^4.0.4",
     "ts-node": "^10.4.0"
   },
   "devDependencies": {

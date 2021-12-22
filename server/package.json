@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "doc": "swagger-cli bundle ./openapi.yaml --outfile ./swagger.yaml --type yaml",
+    "start": "nodemon --watch \"src/index.ts\" --exec \"ts-node\" src/index.ts",
+    "doc": "swagger-cli bundle ./openapi.yaml --outfile ./src/swagger.yaml --type yaml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
